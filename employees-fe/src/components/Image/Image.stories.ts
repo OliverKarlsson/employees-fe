@@ -19,6 +19,13 @@ export const GridPortrait: Story = {
   },
 };
 
+export const GridPortraitWithoutSrc: Story = {
+  args: {
+    alt: "some image",
+    variant: "grid-portrait",
+  },
+};
+
 export const RowPortrait: Story = {
   args: {
     src: "https://i.1337co.de/profile/abdallah-safarini",

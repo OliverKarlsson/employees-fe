@@ -1,0 +1,8 @@
+@use "../../style/variables.scss" as *;
+
+.employee {
+  display: inline-block;
+  border-radius: calc($regular-spacing * 1.2);
+  padding: $regular-spacing $half-spacing $double-spacing $half-spacing;
+  box-shadow: 5px 5px 5px #111, -5px 0 5px #ccc;
+}

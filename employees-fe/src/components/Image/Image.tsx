@@ -7,7 +7,7 @@ type ImageElementProps = React.DetailedHTMLProps<
 >;
 
 interface ImageProps extends Omit<ImageElementProps, "srcSet" | "sizes"> {
-  src: string;
+  src?: string;
   alt: string;
   variant: "grid-portrait" | "row-portrait";
 }
@@ -19,14 +19,23 @@ interface ImageProps extends Omit<ImageElementProps, "srcSet" | "sizes"> {
  * @param props
  * @returns
  */
-const Image = ({ variant, ...rest }: ImageProps) => (
-  <img
-    className={clsx(style.image, [
-      variant === "grid-portrait" && style["image--grid-portrait"],
-      variant === "row-portrait" && style["image--row-portrait"],
-    ])}
-    {...rest}
-  />
-);
+const Image = ({ variant, src, ...rest }: ImageProps) =>
+  !!src ? (
+    <img
+      src={src}
+      className={clsx(style.image, [
+        variant === "grid-portrait" && style["image--grid-portrait"],
+        variant === "row-portrait" && style["image--row-portrait"],
+      ])}
+      {...rest}
+    />
+  ) : (
+    <div
+      className={clsx(style.image, style["image--without-src"], [
+        variant === "grid-portrait" && style["image--grid-portrait"],
+        variant === "row-portrait" && style["image--row-portrait"],
+      ])}
+    />
+  );
 
 export default Image;

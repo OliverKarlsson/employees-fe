@@ -10,8 +10,14 @@
     border-radius: $regular-spacing;
     border-width: 3px;
   }
+
   &--row-portrait {
     height: calc($regular-spacing * 4);
     border-radius: calc($regular-spacing * 2 / 5);
+  }
+
+  &--without-src {
+    border-color: #444;
+    background-color: #eee;
   }
 }
