@@ -1,0 +1,13 @@
+@use "../../style/variables.scss" as *;
+
+.employee {
+  display: flex;
+  border-radius: $half-spacing;
+  padding: $regular-spacing $half-spacing;
+  box-shadow: 5px 5px 5px #111, -5px 0 5px #ccc;
+
+  &__description {
+    margin-left: $half-spacing;
+    width: 100%;
+  }
+}

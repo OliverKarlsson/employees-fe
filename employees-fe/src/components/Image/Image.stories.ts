@@ -21,6 +21,7 @@ export const GridPortrait: Story = {
 
 export const GridPortraitWithoutSrc: Story = {
   args: {
+    src: null,
     alt: "some image",
     variant: "grid-portrait",
   },
