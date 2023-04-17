@@ -1,0 +1,24 @@
+@use "../../style/mediaQueries.scss" as *;
+@use "../../style/variables.scss" as *;
+
+.grid {
+  display: inline-grid;
+  grid-template-columns: repeat(5, 170px);
+  column-gap: $half-spacing;
+  row-gap: $regular-spacing;
+  justify-content: center;
+  width: 100%;
+
+  @include big {
+    grid-template-columns: repeat(4, 170px);
+  }
+  @include medium {
+    grid-template-columns: repeat(3, 170px);
+  }
+  @include small {
+    grid-template-columns: 170px 170px;
+  }
+  @include smallest {
+    grid-template-columns: 170px;
+  }
+}
