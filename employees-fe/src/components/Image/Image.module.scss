@@ -1,0 +1,17 @@
+@use "../../style/variables.scss" as *;
+
+.image {
+  object-fit: cover;
+  border: 1px solid $deep-red-color;
+  aspect-ratio: 0.91;
+
+  &--grid-portrait {
+    height: calc($regular-spacing * 10);
+    border-radius: $regular-spacing;
+    border-width: 3px;
+  }
+  &--row-portrait {
+    height: calc($regular-spacing * 4);
+    border-radius: calc($regular-spacing * 2 / 5);
+  }
+}
