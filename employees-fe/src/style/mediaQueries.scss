@@ -1,22 +1,24 @@
+@use "./variables.scss" as *;
+
 @mixin smallest {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: $smallest-screen) {
     @content;
   }
 }
 
 @mixin small {
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: $small-screen) {
     @content;
   }
 }
 
 @mixin medium {
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: $medium-screen) {
     @content;
   }
 }
 @mixin big {
-  @media screen and (max-width: 1260px) {
+  @media screen and (max-width: $big-screen) {
     @content;
   }
 }

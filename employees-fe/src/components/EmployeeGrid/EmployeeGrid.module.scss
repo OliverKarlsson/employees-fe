@@ -2,6 +2,7 @@
 @use "../../style/variables.scss" as *;
 
 .grid {
+  padding: 0;
   display: inline-grid;
   grid-template-columns: repeat(5, 170px);
   column-gap: $half-spacing;
