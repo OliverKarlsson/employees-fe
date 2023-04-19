@@ -1,8 +1,6 @@
 @use "../../style/mediaQueries.scss" as *;
 @use "../../style/variables.scss" as *;
 
-$six-times-spacing: calc($regular-spacing * 6);
-
 .list {
   padding: 0;
   margin: 0 auto;

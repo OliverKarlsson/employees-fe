@@ -1,0 +1,69 @@
+@use "../../style/mixins.scss" as *;
+@use "../../style/mediaQueries.scss" as *;
+@use "../../style/variables.scss" as *;
+
+.tool {
+  @include boxShadow;
+  padding: $regular-spacing $half-spacing;
+  display: flex;
+  margin: $half-spacing auto 0;
+  width: calc($big-screen - $six-times-spacing);
+  flex-wrap: wrap;
+
+  border-radius: $half-spacing;
+
+  @include big {
+    width: calc(100% - $six-times-spacing);
+  }
+  @include medium {
+    width: calc(100% - $double-spacing);
+  }
+  @include small {
+    width: calc(100% - $regular-spacing);
+    flex-direction: column;
+    border-radius: 0;
+  }
+  @include smallest {
+    width: calc(100% - $half-spacing);
+  }
+
+  &__toggle-zone {
+    width: 292px;
+    margin: 3px 0;
+  }
+  &__toggle-button {
+    text-transform: capitalize;
+    width: 180px;
+    transition: width 0.2s;
+    border: none;
+    color: $white-color;
+    background-color: $primary-color;
+    border-radius: 4px;
+    margin: 0 3px;
+    height: $double-spacing;
+    &:disabled {
+      width: 100px;
+      color: $white-color;
+      background-color: $active-green-color;
+      text-decoration: underline;
+    }
+  }
+  &__filter-growth {
+    margin: 3px 0;
+    flex-grow: 1;
+    max-width: 584px;
+    @include small {
+      max-width: 292px;
+    }
+  }
+  &__filter-bar {
+    height: $double-spacing;
+    width: calc(100% - 40px);
+  }
+  &__clear-button {
+    color: $black-color;
+    background-color: $transparant-color;
+    border: none;
+    height: $double-spacing;
+  }
+}
