@@ -23,3 +23,22 @@
     grid-template-columns: 170px;
   }
 }
+
+.list {
+  padding: 0;
+  margin: 0 auto;
+  width: calc($big-screen - $six-times-spacing);
+
+  @include big {
+    width: calc(100% - $six-times-spacing);
+  }
+  @include medium {
+    width: calc(100% - $double-spacing);
+  }
+  @include small {
+    width: calc(100% - $regular-spacing);
+  }
+  @include smallest {
+    width: calc(100% - $half-spacing);
+  }
+}

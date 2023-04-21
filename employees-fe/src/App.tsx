@@ -1,5 +1,4 @@
-import EmployeeGrid from "components/EmployeeGrid/EmployeeGrid";
-import EmployeeList from "components/EmployeeList/EmployeeList";
+import EmployeeView from "components/EmployeeView/EmployeeView";
 import EmployeesTool from "components/EmployeesTool/EmployeesTool";
 import useEmployees from "hooks/useEmployees";
 
@@ -9,8 +8,7 @@ const App = () => {
   return (
     <>
       <EmployeesTool activeView={activeView} {...rest} />
-      {activeView === "grid" && <EmployeeGrid employees={employees} />}
-      {activeView === "list" && <EmployeeList employees={employees} />}
+      <EmployeeView activeView={activeView} employees={employees} />
     </>
   );
 };
